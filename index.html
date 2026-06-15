@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>דָּם אֶחָד — שיר מחאה (Drill)</title>
+<style>
+  :root { --bg:#0a0a0c; --card:#141418; --accent:#c8102e; --txt:#f3f3f5; --muted:#8a8a93; }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--txt);
+    font-family:"Heebo","Assistant","Segoe UI",Arial,sans-serif;
+    line-height:1.9; padding:24px;
+  }
+  .wrap { max-width:780px; margin:0 auto; }
+  h1 { font-size:2.2rem; margin:.2em 0 .1em; letter-spacing:.5px; }
+  .sub { color:var(--muted); margin:0 0 22px; }
+  .bar { position:sticky; top:0; background:linear-gradient(var(--bg),var(--bg) 70%,transparent);
+    padding:10px 0 14px; display:flex; gap:10px; flex-wrap:wrap; z-index:5; }
+  button {
+    background:var(--accent); color:#fff; border:0; border-radius:12px;
+    padding:12px 18px; font-size:1rem; font-weight:700; cursor:pointer;
+    transition:transform .08s ease, background .2s ease;
+  }
+  button.ghost { background:#23232b; }
+  button:hover { transform:translateY(-1px); }
+  button:active { transform:translateY(1px); }
+  button.ok { background:#1f9d55; }
+  .card { background:var(--card); border:1px solid #222; border-radius:16px;
+    padding:22px 24px; margin:16px 0; }
+  pre { white-space:pre-wrap; font-family:inherit; font-size:1.12rem; margin:0; }
+  .stage { color:var(--accent); font-weight:700; }
+  .stagedir { color:var(--muted); font-style:italic; font-size:.95rem; }
+  footer { color:var(--muted); font-size:.85rem; margin-top:28px; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>דָּם אֶחָד</h1>
+  <p class="sub">שיר מחאה נגד גזענות · Drill עברי · עברית גבוהה ומנוקדת</p>
+
+  <div class="bar">
+    <button id="copyLyrics">📋 העתק מילים בלבד</button>
+    <button id="copyAll" class="ghost">📋 העתק כולל הנחיות הפקה</button>
+  </div>
+
+  <div class="card">
+    <pre id="lyrics">[INTRO]
+עוֹד יֶלֶד נוֹלָד כָּאן, נוֹשֵׂא אֶת הַשֵּׁם —
+וּכְבָר מְבַקְּשִׁים מִמֶּנּוּ לְהַסְבִּיר אֶת צִבְעוֹ
+דָּם אֶחָד. דָּם אֶחָד.
+
+[VERSE 1]
+נוֹלַדְתִּי פֹּה, אֲבָל שׁוֹאֲלִים אוֹתִי "מֵאַיִן" —
+כְּאִלּוּ הַזֶּהוּת שֶׁלִּי תְּלוּיָה בְּמַרְאֵה הָעַיִן.
+שׁוֹטֵר עוֹצֵר אוֹתִי, יָדַי עַל הַמְּכוֹנִית,
+לֹא עָשִׂיתִי כְּלוּם — רַק לָבַשְׁתִּי אֶת הָעוֹר הַנָּכוֹן.
+נַעַר נָפַל בָּרְחוֹב וְהַכְּאֵב עוֹד צוֹרֵב,
+אִמָּא בּוֹכָה בָּעֶרֶב, הַתִּקְוָה כְּמוֹ נֵר שֶׁכָּבָה.
+אוֹמְרִים לִי "שֶׁקֶט, תִּסְתַּדֵּר, אַל תַּעֲשֶׂה רַעַשׁ" —
+אֲבָל הַשֶּׁקֶט הַזֶּה הוּא הָאֵפֶר שֶׁל הָאֵשׁ.
+מִזְרָח, צָפוֹן, אֶתְיוֹפְּיָה, אֶרֶץ הַהַבְטָחוֹת —
+חִלַּקְתֶּם אֶת הַלֶּחֶם וְשָׁכַחְתֶּם אֶת הָאָחוֹת.
+אֲנִי לֹא מִסְפָּר בְּתִיק, לֹא תָּג, לֹא תַּת-אָדָם —
+אֲנִי דֶּגֶל שֶׁל בָּשָׂר, וּבָעוֹרְקִים אוֹתוֹ הַדָּם.
+
+[HOOK]
+דָּם אֶחָד — תַּגִּיד לִי אֵיפֹה הַהֶבְדֵּל?
+שֶׁמֶשׁ אַחַת — עַל כֻּלָּנוּ הִיא יוֹרֶדֶת מֵעֵל.
+לֹא צֶבַע, לֹא מִבְטָא, לֹא מֵאַיִן בָּאתָ —
+רַק לֵב שֶׁפּוֹעֵם, רַק לֵב שֶׁפּוֹעֵם, אַתָּה.
+דָּם אֶחָד — וְהָאֲדָמָה הִיא אַחַת.
+תּוֹרִידוּ אֶת הַגָּדֵר שֶׁבְּנִיתֶם בְּתוֹךְ הַלֵּב.
+
+[VERSE 2]
+טוֹפֶס עֲבוֹדָה — וְהַשֵּׁם שֶׁלִּי נִמְחָק,
+"לֹא מַתְאִים לַפְּרוֹפִיל" — תַּרְגּוּם שֶׁל הַחֹק הַשָּׁתוּק.
+בְּמוֹעֲדוֹן הֵם אוֹמְרִים "רַק חֲבֵרִים", לִי, בַּכְּנִיסָה —
+אוֹתוֹ קוֹד לָבָן יָשָׁן בְּתוֹךְ אֲרִיזָה חֲדָשָׁה.
+לִמְּדוּ אוֹתָנוּ "כָּל אָדָם נִבְרָא בְּצֶלֶם" —
+אָז לָמָּה הַצֶּלֶם מִשְׁתַּנֶּה לְפִי גּוֹן וָפֶלֶךְ?
+אֲנִי כּוֹתֵב בְּעִבְרִית צְלוּלָה, בְּלָשׁוֹן שֶׁל נְבִיאִים,
+שֶׁתִּשְׁמְעוּ הֵיטֵב — אֲנַחְנוּ פֹּה, לֹא אוֹרְחִים.
+הַיֶּלֶד שֶׁלִּי יִגְדַּל זָקוּף, בְּלִי פְּחָדִים,
+בְּלִי לְהַנְמִיךְ מַבָּט מוּל סֶרֶן אוֹ שׁוֹטְרִים.
+זֹאת לֹא נְקָמָה, אֶחָי — זֹאת קְרִיאָה לְחֶשְׁבּוֹן:
+מְדִינָה שֶׁל כֻּלָּם, אוֹ שֶׁקֶר עַל הָאָרוֹן?
+
+[HOOK]
+דָּם אֶחָד — תַּגִּיד לִי אֵיפֹה הַהֶבְדֵּל?
+שֶׁמֶשׁ אַחַת — עַל כֻּלָּנוּ הִיא יוֹרֶדֶת מֵעֵל.
+לֹא צֶבַע, לֹא מִבְטָא, לֹא מֵאַיִן בָּאתָ —
+רַק לֵב שֶׁפּוֹעֵם, רַק לֵב שֶׁפּוֹעֵם, אַתָּה.
+דָּם אֶחָד — וְהָאֲדָמָה הִיא אַחַת.
+תּוֹרִידוּ אֶת הַגָּדֵר שֶׁבְּנִיתֶם בְּתוֹךְ הַלֵּב.
+
+[BRIDGE]
+לֹא בְּאֶבֶן, לֹא בְּאֵשׁ —
+בְּמִלָּה, בְּמִלָּה אֲנִי בּוֹנֶה אֶת הַגֶּשֶׁר.
+שְׁמִי וְשִׁמְךָ נִכְתָּבִים בְּאוֹתָהּ דְּיוֹ,
+וְהַהִיסְטוֹרְיָה תִּזְכֹּר מִי בָּחַר לִהְיוֹת אָדָם.
+
+[HOOK — OUTRO]
+דָּם אֶחָד… דָּם אֶחָד…
+שֶׁמֶשׁ אַחַת — וְהַשַּׁחַר כְּבָר עוֹלֶה.
+לֹא צֶבַע, לֹא מִבְטָא —
+רַק בְּנֵי אָדָם. רַק בְּנֵי אָדָם.</pre>
+  </div>
+
+  <footer>
+    הפקה: 140 BPM · F# minor · 808 גולש · hi-hats טריוליים · drop-out לפני כל הוק<br>
+    יצירת מחאה אמנותית — נגד גזענות ואפליה, לא נגד בני אדם.
+  </footer>
+</div>
+
+<script>
+  const lyrics = document.getElementById('lyrics').innerText;
+  const beats =
+`--- הנחיות הפקה / ביטים ---
+טמפו: 140 BPM (תחושת half-time)
+סולם: F# minor (מינור הרמוני), קר ואפל
+תופים: קיק כבד אחד בתחילת התיבה, snare/clap על ה-3, גלגולי hi-hat טריוליים
+בס: 808 גולש (glide) על שורש הסולם אל הסקסטה הקטנה
+מלודיה: פעמון/צ'לו דק עם ריוורב ארוך, מוטיב 3 תווים יורד
+דיבובים: לחישות "ssk", "grra", הד עמוק בסוף משפטים
+מבנה: Intro → Verse 1 → Hook → Verse 2 → Hook → Bridge → Hook → Outro
+`;
+
+  async function copy(text, btn, label) {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (e) {
+      const ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta);
+    }
+    const old = btn.textContent;
+    btn.textContent = '✓ הועתק!'; btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = old; btn.classList.remove('ok'); }, 1600);
+  }
+
+  document.getElementById('copyLyrics').addEventListener('click', e =>
+    copy(lyrics, e.currentTarget));
+  document.getElementById('copyAll').addEventListener('click', e =>
+    copy(beats + "\n" + lyrics, e.currentTarget));
+</script>
+</body>
+</html>
