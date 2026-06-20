@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>בָּאטְל הַמְּדִינָה — ראפ באטל ישראלי</title>
+<style>
+  :root{
+    --bg:#0a0a0f; --panel:#13131c; --ink:#f5f5f7;
+    --gold:#e8b94a; --red:#e23b4e; --blue:#3b7de2;
+    --muted:#9a9ab0;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:radial-gradient(1200px 600px at 50% -10%,#1c1c2b 0%,var(--bg) 60%);
+    color:var(--ink); font-family:"Segoe UI","Heebo","Assistant",system-ui,Arial,sans-serif;
+    line-height:1.9; padding:24px; min-height:100vh;
+  }
+  .wrap{max-width:860px;margin:0 auto}
+  header{text-align:center;margin-bottom:18px}
+  h1{
+    font-size:clamp(28px,6vw,52px); margin:0 0 6px;
+    background:linear-gradient(90deg,var(--blue),var(--gold),var(--red));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    letter-spacing:1px; font-weight:800;
+  }
+  .sub{color:var(--muted);font-size:15px;margin-bottom:4px}
+  .controls{
+    position:sticky;top:0;z-index:5;background:rgba(10,10,15,.92);
+    backdrop-filter:blur(8px);border:1px solid #26263a;border-radius:16px;
+    padding:14px 16px;margin:16px 0 24px;display:flex;flex-wrap:wrap;
+    gap:14px;align-items:center;justify-content:center;
+  }
+  button{
+    cursor:pointer;border:none;border-radius:12px;padding:11px 20px;
+    font-size:16px;font-weight:700;color:#0a0a0f;
+    background:linear-gradient(90deg,var(--gold),#f0d27a);transition:.15s;
+  }
+  button:hover{transform:translateY(-1px);filter:brightness(1.05)}
+  button.ghost{background:#23233a;color:var(--ink)}
+  button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+  .sliders{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  label.ctl{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px;min-width:150px}
+  input[type=range]{accent-color:var(--gold)}
+  select{background:#23233a;color:var(--ink);border:1px solid #34344e;border-radius:10px;padding:8px;font-size:14px}
+  .verse{
+    background:var(--panel);border:1px solid #24243a;border-radius:18px;
+    padding:18px 22px;margin:18px 0;box-shadow:0 8px 30px rgba(0,0,0,.35);
+  }
+  .tag{
+    display:inline-block;font-size:13px;font-weight:800;letter-spacing:.5px;
+    padding:4px 12px;border-radius:999px;margin-bottom:10px;
+  }
+  .tag.hook{background:rgba(232,185,74,.15);color:var(--gold);border:1px solid var(--gold)}
+  .tag.a{background:rgba(59,125,226,.15);color:var(--blue);border:1px solid var(--blue)}
+  .tag.b{background:rgba(226,59,78,.15);color:var(--red);border:1px solid var(--red)}
+  .tag.bridge{background:rgba(154,154,176,.15);color:var(--muted);border:1px solid var(--muted)}
+  .line{
+    font-size:clamp(19px,3.2vw,24px);padding:4px 8px;border-radius:8px;
+    transition:background .2s,color .2s; cursor:pointer;
+  }
+  .line.active{background:linear-gradient(90deg,rgba(232,185,74,.22),transparent);color:var(--gold);font-weight:700}
+  footer{color:var(--muted);font-size:13px;text-align:center;margin-top:28px;line-height:1.7}
+  .warn{background:#2a1d1d;border:1px solid #5a2b2b;color:#ffb4b4;padding:10px 14px;border-radius:12px;font-size:14px;margin-top:12px;display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>בָּאטְל הַמְּדִינָה</h1>
+    <div class="sub">ראפ באטל ישראלי · קול גברי עמוק · הגייה מדויקת מנוקדת</div>
+  </header>
+
+  <div class="controls">
+    <button id="play">▶︎ נַגֵּן אֶת הַבָּאטְל</button>
+    <button id="stop" class="ghost" disabled>■ עֲצֹר</button>
+    <div class="sliders">
+      <label class="ctl">קוֹל
+        <select id="voice"></select>
+      </label>
+      <label class="ctl">עֹמֶק הַקּוֹל (גַּבְרִי / עָבֶה)
+        <input id="pitch" type="range" min="0" max="1" step="0.05" value="0.25">
+      </label>
+      <label class="ctl">קֶצֶב (כְּדֵי לֹא לִבְלֹעַ מִילִּים)
+        <input id="rate" type="range" min="0.6" max="1.2" step="0.05" value="0.88">
+      </label>
+    </div>
+  </div>
+  <div id="warn" class="warn"></div>
+
+  <div id="song"></div>
+
+  <footer>
+    טיפ: לקול גברי עבה ביותר — בחרו קול עברי/Microsoft "he-IL", הורידו את "עומק הקול" לשמאל
+    ואת "הקצב" לאזור 0.85. אם אין קול עברי במכשיר, התקינו חבילת קול עברית (Settings → Language → Hebrew → Speech).
+  </footer>
+</div>
+
+<script>
+/* ====== הַמִּילִּים — מְנֻקָּדוֹת בְּמַלָּא ====== */
+const SONG = [
+  {tag:"hook", cls:"hook", title:"פִּזְמוֹן", lines:[
+    "מְדִינָה אַחַת, לֵב חָצוּי לִשְׁנַיִם,",
+    "שְׁנֵי עַמִּים, אוֹתָהּ אֲדָמָה, אוֹתָם הַשָּׁמַיִם.",
+    "מוֹכְרִים לָנוּ חֲלוֹם וְגוֹבִים בְּדָם וָזֵעַ,",
+    "תְּפֹס מִיקְרוֹפוֹן בַּיָּד — שֶׁהָאֱמֶת תִּשָּׁמַע!"
+  ]},
+  {tag:"a", cls:"a", title:"בַּיִת 1 · מַחֲנֶה כָּחֹל", lines:[
+    "אֲנִי קָם בַּבֹּקֶר וְהַבַּנְק כְּבָר בְּמִינוּס,",
+    "הַמַּשְׂכֹּרֶת נִכְנֶסֶת וּמִיָּד אוֹמֶרֶת בַּיי.",
+    "שְׂכַר הַדִּירָה מְטַפֵּס לִי גָּבוֹהַּ מֵעָנָן,",
+    "וְהֵם מִן הַבָּמָה מַבְטִיחִים אֶת הַכֹּל — בְּחִנָּם.",
+    "סַל הַקְּנִיּוֹת מִתְרוֹקֵן וְהָאַרְנָק כְּבָר רֵיק,",
+    "מְחִיר הַקּוֹטֶג' מְזַנֵּק — וְהָעָם נִשְׁאָר שָׁתִיק?",
+    "לֹא! אֲנִי פּוֹתֵחַ פֶּה, לֹא בּוֹלֵעַ אַף מִלָּה,",
+    "כָּל הֲבָרָה יוֹצֵאת חַדָּה — כְּמוֹ לַהַב בַּלַּיְלָה."
+  ]},
+  {tag:"b", cls:"b", title:"בַּיִת 2 · מַחֲנֶה אָדֹם", lines:[
+    "גַּם אֲנִי מֵאוֹתוֹ רְחוֹב, גַּם לִי כּוֹאֵב הַלֵּב,",
+    "אוֹתוֹ שׁוֹטֵר, אוֹתוֹ פַּחַד, אוֹתָהּ סַכִּין בָּעֶרֶב.",
+    "אוֹמְרִים לָנוּ 'תִּשְׂנְאוּ', שֶׁנִּשְׁכַּח מִי הוּא הֶעָנִי,",
+    "מַסִּיתִים אָח בְּאָחִיו — וְגוֹנְבִים אֶת הַקֻּפָּה בֵּינְתַיִם.",
+    "פֶּשַׁע בָּרְחוֹב גּוֹאֶה, יְרִיּוֹת לְיַד הַגַּן,",
+    "וְהַשַּׂר בַּטֵּלֵוִיזְיָה מְשַׂחֵק אוֹתָהּ מְכֻוָּן.",
+    "אֲבָל לֹא אֶבְלַע מִילִּים, אֲנִי הוֹגֶה כָּל אוֹת,",
+    "שְׁתֵּי גָּדוֹת לַמַּטְבֵּעַ — אַךְ אוֹתָהּ אֱמֶת לִרְאוֹת."
+  ]},
+  {tag:"bridge", cls:"bridge", title:"גֶּשֶׁר", lines:[
+    "הֵם מְפַלְּגִים, וַאֲנַחְנוּ מִתְאַחֲדִים,",
+    "הֵם בָּעֵינַיִם עוֹבְדִים — וַאֲנַחְנוּ מְבִינִים.",
+    "לֹא יָמִין, לֹא שְׂמֹאל — רַק אֱמֶת מוּל שֶׁקֶר,",
+    "הָעָם הַזֶּה עֵרָנִי, וְהוּא כְּבָר מִתְעוֹרֵר!"
+  ]},
+  {tag:"hook", cls:"hook", title:"פִּזְמוֹן", lines:[
+    "מְדִינָה אַחַת, לֵב חָצוּי לִשְׁנַיִם,",
+    "שְׁנֵי עַמִּים, אוֹתָהּ אֲדָמָה, אוֹתָם הַשָּׁמַיִם.",
+    "מוֹכְרִים לָנוּ חֲלוֹם וְגוֹבִים בְּדָם וָזֵעַ,",
+    "תְּפֹס מִיקְרוֹפוֹן בַּיָּד — שֶׁהָאֱמֶת תִּשָּׁמַע!"
+  ]},
+  {tag:"a", cls:"a", title:"בַּיִת 3 · אַחְדוּת", lines:[
+    "אָז קְחוּ אֶת הַשִּׂנְאָה וְהַחְזִירוּ לַשּׁוֹלְחִים,",
+    "שְׁנֵי עַמִּים תַּחַת שֶׁמֶשׁ אַחַת — לֹא נִשְׁאָרִים שׁוֹתְקִים.",
+    "מִיֹּקֶר הַמִּחְיָה עַד הַשֹּׁחַד בַּלִּשְׁכָּה,",
+    "הַבָּאטְל הַזֶּה לֹא נִגְמָר — עַד שֶׁתָּבוֹא הַהֲפֵכָה.",
+    "בְּמִילָּה צְלוּלָה, בְּאוֹת בְּרוּרָה, בְּקוֹל עָמֹק וְגֶבֶר,",
+    "אֲנִי יָרִיתִי אֱמֶת — וְאַתֶּם תַּחְלִיטוּ מָחָר."
+  ]}
+];
+
+/* ====== רֶנְדּוּר ====== */
+const songEl = document.getElementById('song');
+const flat = []; // {el, text}
+SONG.forEach(block=>{
+  const v=document.createElement('div'); v.className='verse';
+  const t=document.createElement('span'); t.className='tag '+block.cls; t.textContent=block.title;
+  v.appendChild(t);
+  block.lines.forEach(line=>{
+    const p=document.createElement('div'); p.className='line'; p.textContent=line;
+    v.appendChild(p);
+    flat.push({el:p, text:line});
+  });
+  songEl.appendChild(v);
+});
+
+/* ====== דִּבּוּר ====== */
+const synth = window.speechSynthesis;
+const playBtn=document.getElementById('play');
+const stopBtn=document.getElementById('stop');
+const voiceSel=document.getElementById('voice');
+const pitchEl=document.getElementById('pitch');
+const rateEl=document.getElementById('rate');
+const warnEl=document.getElementById('warn');
+
+let voices=[];
+function loadVoices(){
+  voices=synth.getVoices();
+  const heb=voices.filter(v=>/he|iw/i.test(v.lang));
+  voiceSel.innerHTML='';
+  const list = heb.length?heb:voices;
+  list.forEach(v=>{
+    const o=document.createElement('option');
+    o.value=v.name; o.textContent=`${v.name} (${v.lang})`;
+    voiceSel.appendChild(o);
+  });
+  // העדפה אוטומטית: קול עברי, רצוי גברי
+  const male=heb.find(v=>/male|david|asaf|david|man|הגבר/i.test(v.name));
+  if(male) voiceSel.value=male.name;
+  if(!heb.length){
+    warnEl.style.display='block';
+    warnEl.textContent='לא נמצא קול עברי במכשיר — ההגייה לא תהיה מדויקת. התקינו חבילת קול עברית (he-IL) במערכת ההפעלה, ואז רעננו את הדף.';
+  } else { warnEl.style.display='none'; }
+}
+loadVoices();
+if(speechSynthesis.onvoiceschanged!==undefined){
+  speechSynthesis.onvoiceschanged=loadVoices;
+}
+
+let idx=0, playing=false;
+function clearHL(){ flat.forEach(f=>f.el.classList.remove('active')); }
+
+function speakLine(){
+  if(!playing || idx>=flat.length){ stopAll(); return; }
+  clearHL();
+  const item=flat[idx];
+  item.el.classList.add('active');
+  item.el.scrollIntoView({behavior:'smooth',block:'center'});
+
+  const u=new SpeechSynthesisUtterance(item.text);
+  const chosen=voices.find(v=>v.name===voiceSel.value);
+  if(chosen){ u.voice=chosen; u.lang=chosen.lang; } else { u.lang='he-IL'; }
+  u.pitch=parseFloat(pitchEl.value);   // נמוך = קול גברי עבה
+  u.rate=parseFloat(rateEl.value);     // איטי-מעט = הגייה מלאה, בלי לבלוע אותיות
+  u.volume=1;
+  u.onend=()=>{
+    idx++;
+    // השהיה קצרה בין שורות — נושמים, לא בולעים
+    setTimeout(speakLine, 230);
+  };
+  u.onerror=()=>{ idx++; setTimeout(speakLine,120); };
+  synth.speak(u);
+}
+
+function startPlay(){
+  if(playing) return;
+  synth.cancel();
+  playing=true; idx=0;
+  playBtn.disabled=true; stopBtn.disabled=false;
+  speakLine();
+}
+function stopAll(){
+  playing=false; synth.cancel(); clearHL();
+  playBtn.disabled=false; stopBtn.disabled=true;
+}
+
+playBtn.addEventListener('click',startPlay);
+stopBtn.addEventListener('click',stopAll);
+
+// לחיצה על שורה — להשמיע אותה לבד
+flat.forEach((f,i)=>f.el.addEventListener('click',()=>{
+  synth.cancel(); clearHL(); f.el.classList.add('active');
+  const u=new SpeechSynthesisUtterance(f.text);
+  const chosen=voices.find(v=>v.name===voiceSel.value);
+  if(chosen){u.voice=chosen;u.lang=chosen.lang;} else {u.lang='he-IL';}
+  u.pitch=parseFloat(pitchEl.value); u.rate=parseFloat(rateEl.value);
+  synth.speak(u);
+}));
+
+window.addEventListener('beforeunload',()=>synth.cancel());
+</script>
+</body>
+</html>
