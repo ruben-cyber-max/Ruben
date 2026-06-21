@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>נֵר לְזִכְרָם — שִׁיר שֶׁקֶט לְזֵכֶר הַנּוֹפְלִים</title>
+<style>
+  :root {
+    --bg1: #060810;
+    --bg2: #0d1426;
+    --ink: #e8edf7;
+    --soft: #9fb0cf;
+    --gold: #f4d58d;
+    --glow: rgba(244, 213, 141, 0.55);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body {
+    font-family: "Frank Ruhl Libre", "David Libre", "Times New Roman", serif;
+    background:
+      radial-gradient(1200px 800px at 50% -10%, #16203a 0%, transparent 60%),
+      linear-gradient(180deg, var(--bg2) 0%, var(--bg1) 100%);
+    color: var(--ink);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 80px;
+    line-height: 1.9;
+    overflow-x: hidden;
+  }
+
+  /* ---- נֵר / candle ---- */
+  .candle { position: relative; width: 60px; height: 120px; margin: 0 auto 10px; }
+  .flame {
+    position: absolute; top: -28px; left: 50%; width: 18px; height: 40px;
+    transform: translateX(-50%);
+    background: radial-gradient(circle at 50% 70%, #fff6d8 0%, var(--gold) 40%, #e08a2a 75%, transparent 100%);
+    border-radius: 50% 50% 45% 45%;
+    filter: blur(0.5px);
+    box-shadow: 0 0 30px 12px var(--glow), 0 0 70px 24px rgba(244,213,141,0.25);
+    animation: flicker 2.6s infinite ease-in-out;
+    transform-origin: 50% 90%;
+  }
+  .wax {
+    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 26px; height: 96px; border-radius: 8px;
+    background: linear-gradient(180deg, #fdf6e3 0%, #d9cba6 100%);
+    box-shadow: inset -4px 0 8px rgba(0,0,0,0.25);
+  }
+  @keyframes flicker {
+    0%, 100% { transform: translateX(-50%) scale(1) rotate(-1deg); opacity: 1; }
+    25%      { transform: translateX(-52%) scale(1.04, 0.97) rotate(1.5deg); opacity: 0.92; }
+    50%      { transform: translateX(-49%) scale(0.97, 1.05) rotate(-1.5deg); opacity: 0.97; }
+    75%      { transform: translateX(-51%) scale(1.02, 0.99) rotate(1deg); opacity: 0.9; }
+  }
+
+  h1 { font-size: 2rem; font-weight: 700; letter-spacing: 1px; margin: 14px 0 2px; color: var(--gold); text-shadow: 0 0 24px rgba(244,213,141,0.25); }
+  .subtitle { color: var(--soft); font-size: 1rem; margin-bottom: 28px; }
+
+  .controls { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 36px; }
+  button {
+    font-family: inherit; font-size: 1rem; color: var(--bg1);
+    background: linear-gradient(180deg, #f7e2a8, #e8c06b);
+    border: none; border-radius: 999px; padding: 11px 26px; cursor: pointer;
+    box-shadow: 0 4px 18px rgba(244,213,141,0.25);
+    transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+  }
+  button:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(244,213,141,0.35); }
+  button:disabled { opacity: .45; cursor: default; transform: none; box-shadow: none; }
+  button.ghost { background: transparent; color: var(--soft); border: 1px solid rgba(159,176,207,0.35); box-shadow: none; }
+
+  .song { max-width: 680px; width: 100%; text-align: center; }
+  .stanza { margin: 0 auto 34px; }
+  .stanza .label { display: block; color: var(--gold); font-size: 0.8rem; letter-spacing: 3px; opacity: .65; margin-bottom: 8px; }
+  .line {
+    font-size: 1.5rem; padding: 4px 8px; border-radius: 8px;
+    transition: color .4s ease, background .4s ease, text-shadow .4s ease;
+    color: var(--ink);
+  }
+  .line.chorus { font-style: italic; color: var(--soft); }
+  .line.active {
+    color: #fff; background: rgba(244,213,141,0.10);
+    text-shadow: 0 0 22px var(--glow);
+  }
+
+  .note { color: var(--soft); font-size: 0.85rem; max-width: 600px; text-align: center; margin-top: 24px; opacity: .75; }
+  .voicewrap { margin-bottom: 30px; color: var(--soft); font-size: .9rem; }
+  select { font-family: inherit; background: #11192e; color: var(--ink); border: 1px solid rgba(159,176,207,0.3); border-radius: 8px; padding: 6px 10px; }
+</style>
+</head>
+<body>
+
+  <div class="candle" aria-hidden="true">
+    <div class="flame"></div>
+    <div class="wax"></div>
+  </div>
+
+  <h1>נֵר לְזִכְרָם</h1>
+  <div class="subtitle">שִׁיר שֶׁקֶט לְזֵכֶר הַנּוֹפְלִים בַּמִּלְחָמָה · יִזְכֹּר</div>
+
+  <div class="voicewrap">
+    קוֹל הַזַּמָּר:
+    <select id="voiceSelect" aria-label="בחירת קול"></select>
+  </div>
+
+  <div class="controls">
+    <button id="sing">▶︎ שִׁיר בְּשֶׁקֶט</button>
+    <button id="stop" class="ghost" disabled>הַפְסֵק</button>
+  </div>
+
+  <div class="song" id="song"></div>
+
+  <div class="note">
+    הַשִּׁיר מְנֻקָּד בְּמַלֵא כְּדֵי שֶׁהַזַּמָּר יְבַטֵּא כָּל מִלָּה נָכוֹן וּבְלִי שְׁגִיאוֹת.
+    מוּמְלָץ לְהַאֲזִין בְּעוֹצְמָה נְמוּכָה וּבְשֶׁקֶט. (לְקוֹל עִבְרִי טִבְעִי — בְּחַר קוֹל he-IL אִם זָמִין.)
+  </div>
+
+<script>
+/* ─────────────────────────────────────────────────────────────
+   נֵר לְזִכְרָם — שִׁיר שֶׁקֶט לְזֵכֶר הַנּוֹפְלִים
+   המילים מנוקדות במלואן כדי שמנוע ההקראה (TTS) יבטא נכון.
+   ───────────────────────────────────────────────────────────── */
+
+const SONG = [
+  { label: "בַּיִת רִאשׁוֹן", chorus: false, lines: [
+    "בַּלַּיְלָה הַשָּׁקֵט נוֹשֶׁבֶת הָרוּחַ,",
+    "עַל גִּבְעָה רְחוֹקָה, עַל שְׂדֵה הַשָּׁלוֹם.",
+    "שָׁם נָחִים בָּנֵינוּ, נִשְׁמָתָם פּוֹרַחַת,",
+    "זִכְרָם בְּלִבֵּנוּ חָקוּק עַד הַיּוֹם.",
+  ]},
+  { label: "פִּזְמוֹן", chorus: true, lines: [
+    "שִׁירוּ לָהֶם בְּשֶׁקֶט, שִׁירוּ בְּדִמְעָה,",
+    "הֵם נָתְנוּ אֶת הַכֹּל לְמַעַן אַרְצֵנוּ.",
+    "נֵר קָטָן דּוֹלֵק, אוֹר רַךְ בָּאֲפֵלָה,",
+    "לְעוֹלָם לֹא נִשְׁכַּח אֶת אַהֲבַתְכֶם.",
+  ]},
+  { label: "בַּיִת שֵׁנִי", chorus: false, lines: [
+    "הָיוּ הֵם צְעִירִים, מְלֵאֵי תִּקְוָה וַחֲלוֹם,",
+    "חִיּוּכָם הָיָה אוֹר וְצַחֲקָם הָיָה שִׁיר.",
+    "עַכְשָׁו הֵם כּוֹכָבִים בִּשְׁמֵי הַמָּרוֹם,",
+    "שׁוֹמְרִים מִלְמַעְלָה עַל בַּיִת וְעִיר.",
+  ]},
+  { label: "פִּזְמוֹן", chorus: true, lines: [
+    "שִׁירוּ לָהֶם בְּשֶׁקֶט, שִׁירוּ בְּדִמְעָה,",
+    "הֵם נָתְנוּ אֶת הַכֹּל לְמַעַן אַרְצֵנוּ.",
+    "נֵר קָטָן דּוֹלֵק, אוֹר רַךְ בָּאֲפֵלָה,",
+    "לְעוֹלָם לֹא נִשְׁכַּח אֶת אַהֲבַתְכֶם.",
+  ]},
+  { label: "סִיּוּם", chorus: false, lines: [
+    "וְכָל אִמָּא בּוֹכָה, וְכָל אַבָּא שׁוֹתֵק,",
+    "וְהָאָרֶץ כֻּלָּהּ מַרְכִּינָה אֶת רֹאשָׁהּ.",
+    "אַךְ הָאוֹר שֶׁהוֹתַרְתֶּם לְעוֹלָם לֹא יִדְעַךְ —",
+    "בְּכָל לֵב יִשְׂרָאֵל נִשְׁמַתְכֶם לוֹחֶשֶׁת.",
+  ]},
+];
+
+/* ── בנייה של ה־DOM ── */
+const songEl = document.getElementById("song");
+const lineEls = [];
+SONG.forEach(stanza => {
+  const block = document.createElement("div");
+  block.className = "stanza";
+  const lbl = document.createElement("span");
+  lbl.className = "label";
+  lbl.textContent = stanza.label;
+  block.appendChild(lbl);
+  stanza.lines.forEach(text => {
+    const ln = document.createElement("div");
+    ln.className = "line" + (stanza.chorus ? " chorus" : "");
+    ln.textContent = text;
+    block.appendChild(ln);
+    lineEls.push({ el: ln, text });
+  });
+  songEl.appendChild(block);
+});
+
+/* ── מנוע השירה (Web Speech API) ── */
+const synth = window.speechSynthesis;
+const voiceSelect = document.getElementById("voiceSelect");
+const singBtn = document.getElementById("sing");
+const stopBtn = document.getElementById("stop");
+let voices = [];
+let singing = false;
+let idx = 0;
+
+function loadVoices() {
+  voices = synth.getVoices();
+  voiceSelect.innerHTML = "";
+  // העדפה לקולות עבריים
+  const ordered = [...voices].sort((a, b) => {
+    const ah = /he|iw/i.test(a.lang) ? 0 : 1;
+    const bh = /he|iw/i.test(b.lang) ? 0 : 1;
+    return ah - bh;
+  });
+  ordered.forEach(v => {
+    const opt = document.createElement("option");
+    opt.value = v.name;
+    opt.textContent = `${v.name} — ${v.lang}` + (/he|iw/i.test(v.lang) ? "  ✓" : "");
+    voiceSelect.appendChild(opt);
+  });
+  if (!ordered.length) {
+    const opt = document.createElement("option");
+    opt.textContent = "(לֹא נִמְצְאוּ קוֹלוֹת בַּדַּפְדְּפָן)";
+    voiceSelect.appendChild(opt);
+  }
+}
+loadVoices();
+if (typeof synth.onvoiceschanged !== "undefined") synth.onvoiceschanged = loadVoices;
+
+function chosenVoice() {
+  const name = voiceSelect.value;
+  return voices.find(v => v.name === name) || voices.find(v => /he|iw/i.test(v.lang)) || voices[0];
+}
+
+function highlight(i) {
+  lineEls.forEach((l, k) => l.el.classList.toggle("active", k === i));
+  if (i >= 0 && lineEls[i]) lineEls[i].el.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function singLine() {
+  if (!singing || idx >= lineEls.length) { stopSinging(); return; }
+  highlight(idx);
+  const u = new SpeechSynthesisUtterance(lineEls[idx].text);
+  const v = chosenVoice();
+  if (v) { u.voice = v; u.lang = v.lang; }
+  else { u.lang = "he-IL"; }
+  // מאפיינים של "שירה שקטה": איטי, רך, נמוך
+  u.rate = 0.72;   // לאט, כמו שירה
+  u.pitch = 0.95;  // נמוך מעט, חם
+  u.volume = 0.6;  // שקט
+  u.onend = () => {
+    idx++;
+    // השהיה קצרה בין שורות — נשימה
+    setTimeout(singLine, 650);
+  };
+  u.onerror = () => { idx++; setTimeout(singLine, 400); };
+  synth.speak(u);
+}
+
+function startSinging() {
+  if (singing) return;
+  synth.cancel();
+  singing = true;
+  idx = 0;
+  singBtn.disabled = true;
+  stopBtn.disabled = false;
+  singLine();
+}
+
+function stopSinging() {
+  singing = false;
+  synth.cancel();
+  highlight(-1);
+  singBtn.disabled = false;
+  stopBtn.disabled = true;
+}
+
+singBtn.addEventListener("click", startSinging);
+stopBtn.addEventListener("click", stopSinging);
+window.addEventListener("beforeunload", () => synth.cancel());
+</script>
+</body>
+</html>
