@@ -16,7 +16,13 @@ Israeli battle rap, hard-hitting Hebrew hip-hop, aggressive boom-bap and trap, g
 ## Lyrics (שדה "Lyrics" ב-Suno)
 
 ```
-[Intro - MC 1, aggressive]
+[Intro - Spoken word, dark ambient, building beat]
+שָׁעָה שְׁתַּיִם אַחֲרֵי חֲצוֹת... עוֹד חֹדֶשׁ שֶׁנִּגְמַר
+שְׁנֵי אֲנָשִׁים, אוֹתָהּ מִלְחָמָה אַחַת
+הַזִּירָה הִיא הָרְחוֹב, וְהַפְּרָס — לִשְׂרֹד עוֹד יוֹם
+תָּכִינוּ אֶת הַלֵּב... זֶה מַתְחִיל עַכְשָׁו
+
+[Beat Drop - MC 1, aggressive]
 תַּעֲלֶה, יַלְדּוֹן, תַּרְאֶה מַה כְּבָר יֵשׁ לְךָ
 מְדַבֵּר עַל הִשָּׂרְדוּת? אֲנִי אֲסַיֵּם אוֹתְךָ פֹּה...
 
