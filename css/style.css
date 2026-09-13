@@ -1,0 +1,168 @@
+/* VOID RAIDERS - cabinet chrome and CRT treatment. */
+
+:root {
+  --bezel: #12151f;
+  --ink: #59f8ff;
+  --phosphor: #57ff6e;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #07080d radial-gradient(circle at 50% 0%, #171b2b 0%, #05060c 70%);
+  color: #9fb0c8;
+  font-family: "Courier New", ui-monospace, monospace;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.cabinet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-height: 100%;
+}
+
+.marquee {
+  margin: 0;
+  font-size: clamp(14px, 3.4vw, 26px);
+  letter-spacing: 0.32em;
+  font-weight: 700;
+  color: var(--ink);
+  text-shadow: 0 0 10px rgba(89, 248, 255, 0.55);
+}
+
+.marquee span {
+  color: var(--phosphor);
+  margin-left: 0.32em;
+  text-shadow: 0 0 10px rgba(87, 255, 110, 0.5);
+}
+
+/* --- screen ------------------------------------------------------------- */
+
+.screen {
+  position: relative;
+  border: 3px solid var(--bezel);
+  border-radius: 10px;
+  background: #05060c;
+  box-shadow:
+    0 0 0 6px #0b0d15,
+    0 0 34px rgba(89, 248, 255, 0.16),
+    0 14px 40px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  line-height: 0;
+}
+
+canvas {
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: saturate(1.15) contrast(1.05);
+}
+
+/* Scanlines + aperture-grille tint, straight out of a 1978 arcade monitor. */
+.crt {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0px,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(0, 0, 0, 0.28) 3px,
+      rgba(0, 0, 0, 0.28) 4px
+    ),
+    repeating-linear-gradient(
+      to right,
+      rgba(255, 0, 60, 0.05),
+      rgba(0, 255, 120, 0.04) 1px,
+      rgba(60, 120, 255, 0.05) 2px
+    );
+  mix-blend-mode: multiply;
+  animation: flicker 5.5s infinite steps(60);
+}
+
+/* Curved-glass highlight and edge vignette. */
+.glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 70% at 50% -10%, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0) 60%),
+    radial-gradient(110% 110% at 50% 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+@keyframes flicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.84; }
+  98% { opacity: 1; }
+  99% { opacity: 0.9; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt { animation: none; }
+}
+
+/* --- touch controls ----------------------------------------------------- */
+
+.controls {
+  display: none;
+  gap: 10px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.controls.is-active {
+  display: flex;
+}
+
+.pad {
+  flex: 1;
+  min-height: 58px;
+  border: 2px solid #232a3d;
+  border-radius: 10px;
+  background: linear-gradient(#161a28, #0c0f18);
+  color: var(--ink);
+  font: 700 18px/1 "Courier New", monospace;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.pad--fire {
+  flex: 1.4;
+  color: #ff9aa2;
+  border-color: #3a2330;
+}
+
+.pad.is-down {
+  background: linear-gradient(#232a3d, #141828);
+  box-shadow: inset 0 0 12px rgba(89, 248, 255, 0.25);
+}
+
+.legend {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #63718c;
+}
+
+.legend strong { color: #9fb0c8; }
+
+@media (max-width: 520px), (pointer: coarse) {
+  .legend { display: none; }
+}

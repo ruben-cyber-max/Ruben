@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="description" content="Void Raiders - a retro arcade shooter built with plain HTML5 canvas and JavaScript.">
+<meta name="theme-color" content="#05060c">
+<title>VOID RAIDERS</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><rect width='8' height='8' fill='%2305060c'/><path fill='%2359f8ff' d='M3 1h2v1H3zM2 2h4v1H2zM1 3h6v1H1zM0 4h8v1H0zM2 5h1v1H2zM5 5h1v1H5zM1 6h1v1H1zM6 6h1v1H6z'/></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cabinet">
+    <h1 class="marquee">VOID<span>RAIDERS</span></h1>
+
+    <div class="screen" id="screen">
+      <canvas id="game" width="224" height="256" aria-label="Void Raiders game screen" role="img"></canvas>
+      <div class="crt" aria-hidden="true"></div>
+      <div class="glare" aria-hidden="true"></div>
+    </div>
+
+    <div class="controls" id="touch-controls" aria-hidden="true">
+      <button class="pad" id="btn-left" type="button" aria-label="Move left">&#9664;</button>
+      <button class="pad" id="btn-right" type="button" aria-label="Move right">&#9654;</button>
+      <button class="pad pad--fire" id="btn-fire" type="button" aria-label="Fire">FIRE</button>
+    </div>
+
+    <p class="legend">
+      <strong>&larr; &rarr;</strong> / <strong>A D</strong> move
+      &nbsp;&middot;&nbsp; <strong>SPACE</strong> fire
+      &nbsp;&middot;&nbsp; <strong>P</strong> pause
+      &nbsp;&middot;&nbsp; <strong>M</strong> sound
+    </p>
+  </div>
+
+  <script src="js/sprites.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/shield.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
