@@ -20,6 +20,7 @@ Old school Israeli hip hop, 90s boom bap, aggressive deep bass male rapper, very
 
 [Beat Drop: hard boom bap drums, deep male rapper, shouted]
 זֶה לְכָל אִמָּא. בָּאָרֶץ וּבָעוֹלָם!
+אִמָּא לֹא יְשֵׁנָה! (לֹא יְשֵׁנָה!)
 
 [Verse 1: deep bass male rapper, aggressive, gritty]
 שָׁלוֹשׁ בַּלַּיְלָה, אַזְעָקָה, הִיא רִאשׁוֹנָה לָקוּם
@@ -31,11 +32,21 @@ Old school Israeli hip hop, 90s boom bap, aggressive deep bass male rapper, very
 בַּבֹּקֶר הִיא מְחַיֶּכֶת, מְכִינָה אֲרוּחַת עֶשֶׂר לַגַּן
 וְרַק הַמִּקְלַחַת שׁוֹמַעַת אֵיךְ הִיא בּוֹכָה שָׁם
 
+[Pre-Hook: deep male rapper, building tension, drums cut to kick only]
+הִיא לֹא יְשֵׁנָה, הִיא לֹא נָחָה
+לֹא מְבַקֶּשֶׁת, לֹא צוֹעֶקֶת, רַק שׁוֹמֶרֶת עַל הַמִּשְׁפָּחָה
+
 [Hook: deep male rapper, gang vocals, chanted, powerful]
-אֵין לָהּ מֶדַלְיָה, אֵין לָהּ דַּרְגוֹת עַל הַכְּתֵפַיִם
+אֵין לָהּ מֶדַלְיָה, אֵין לָהּ דַּרְגוֹת עַל הַכְּתֵפַיִם (אֵין!)
 אֲבָל הִיא עוֹמֶדֶת בַּחֲזִית, עִם הַלֵּב שֶׁלָּהּ בֵּין הַיָּדַיִם
-אִמָּא יִשְׂרְאֵלִית, הִיא לֹא נִשְׁבֶּרֶת
-גַּם כְּשֶׁהַשָּׁמַיִם נוֹפְלִים, הִיא עוֹד מְחַבֶּקֶת
+אִמָּא יִשְׂרְאֵלִית, הִיא לֹא נִשְׁבֶּרֶת (לֹא נִשְׁבֶּרֶת!)
+גַּם כְּשֶׁהַשָּׁמַיִם נוֹפְלִים, הִיא עוֹד מְחַבֶּקֶת (עוֹד מְחַבֶּקֶת!)
+
+[Post-Hook: gang vocals, call and response, stadium chant]
+אִמָּא לֹא יְשֵׁנָה! (לֹא יְשֵׁנָה!)
+אִמָּא לֹא יְשֵׁנָה! (לֹא יְשֵׁנָה!)
+כָּל הַלַּיְלָה עֵרָה, עַד שֶׁכֻּלָּם בַּבַּיִת
+אִמָּא לֹא יְשֵׁנָה!
 
 [Verse 2: deep bass male rapper, intense, building]
 יֵשׁ אִמָּא שֶׁעוֹמֶדֶת בַּכִּכָּר עִם תְּמוּנָה
@@ -47,11 +58,21 @@ Old school Israeli hip hop, 90s boom bap, aggressive deep bass male rapper, very
 אָז אַל תַּגִּידוּ לִי מִי גִּבּוֹר, אַל תַּגִּידוּ לִי מִי חָזָק
 הַגִּבּוֹרָה הֲכִי גְּדוֹלָה? אִמָּא בַּמַּמָּד, עִם שְׁלוֹשָׁה יְלָדִים וְלֵב שֶׁלֹּא נִפְרָק
 
+[Pre-Hook: deep male rapper, building tension, drums cut to kick only]
+הִיא לֹא יְשֵׁנָה, הִיא לֹא נָחָה
+לֹא מְבַקֶּשֶׁת, לֹא צוֹעֶקֶת, רַק שׁוֹמֶרֶת עַל הַמִּשְׁפָּחָה
+
 [Hook: deep male rapper, gang vocals, chanted, powerful]
-אֵין לָהּ מֶדַלְיָה, אֵין לָהּ דַּרְגוֹת עַל הַכְּתֵפַיִם
+אֵין לָהּ מֶדַלְיָה, אֵין לָהּ דַּרְגוֹת עַל הַכְּתֵפַיִם (אֵין!)
 אֲבָל הִיא עוֹמֶדֶת בַּחֲזִית, עִם הַלֵּב שֶׁלָּהּ בֵּין הַיָּדַיִם
-אִמָּא יִשְׂרְאֵלִית, הִיא לֹא נִשְׁבֶּרֶת
-גַּם כְּשֶׁהַשָּׁמַיִם נוֹפְלִים, הִיא עוֹד מְחַבֶּקֶת
+אִמָּא יִשְׂרְאֵלִית, הִיא לֹא נִשְׁבֶּרֶת (לֹא נִשְׁבֶּרֶת!)
+גַּם כְּשֶׁהַשָּׁמַיִם נוֹפְלִים, הִיא עוֹד מְחַבֶּקֶת (עוֹד מְחַבֶּקֶת!)
+
+[Post-Hook: gang vocals, call and response, stadium chant]
+אִמָּא לֹא יְשֵׁנָה! (לֹא יְשֵׁנָה!)
+אִמָּא לֹא יְשֵׁנָה! (לֹא יְשֵׁנָה!)
+כָּל הַלַּיְלָה עֵרָה, עַד שֶׁכֻּלָּם בַּבַּיִת
+אִמָּא לֹא יְשֵׁנָה!
 
 [Bridge: beat drops out, female vocals, sung, haunting, oud]
 שׁוּבוּ הַבַּיְתָה, יְלָדִים שֶׁלִּי
@@ -67,11 +88,21 @@ Old school Israeli hip hop, 90s boom bap, aggressive deep bass male rapper, very
 וְאָז הֵבַנְתִּי, כָּל הַזְּמַן הַזֶּה הִיא הָיְתָה אִתִּי בַּשֶּׁטַח
 כָּל לַיְלָה שֶׁשָּׁמַרְתִּי, הִיא שָׁמְרָה עָלַי מֵהַמִּטְבָּח
 
+[Pre-Hook: deep male rapper, building tension, drums cut to kick only]
+הִיא לֹא יְשֵׁנָה, הִיא לֹא נָחָה
+לֹא מְבַקֶּשֶׁת, לֹא צוֹעֶקֶת, רַק שׁוֹמֶרֶת עַל הַמִּשְׁפָּחָה
+
 [Final Hook: deep male rapper, gang vocals, female vocals layered, full power]
-אֵין לָהּ מֶדַלְיָה, אֵין לָהּ דַּרְגוֹת עַל הַכְּתֵפַיִם
+אֵין לָהּ מֶדַלְיָה, אֵין לָהּ דַּרְגוֹת עַל הַכְּתֵפַיִם (אֵין!)
 אֲבָל הִיא עוֹמֶדֶת בַּחֲזִית, עִם הַלֵּב שֶׁלָּהּ בֵּין הַיָּדַיִם
-אִמָּא יִשְׂרְאֵלִית, הִיא לֹא נִשְׁבֶּרֶת
-גַּם כְּשֶׁהַשָּׁמַיִם נוֹפְלִים, הִיא עוֹד מְחַבֶּקֶת
+אִמָּא יִשְׂרְאֵלִית, הִיא לֹא נִשְׁבֶּרֶת (לֹא נִשְׁבֶּרֶת!)
+גַּם כְּשֶׁהַשָּׁמַיִם נוֹפְלִים, הִיא עוֹד מְחַבֶּקֶת (עוֹד מְחַבֶּקֶת!)
+
+[Post-Hook: gang vocals, call and response, stadium chant]
+אִמָּא לֹא יְשֵׁנָה! (לֹא יְשֵׁנָה!)
+אִמָּא לֹא יְשֵׁנָה! (לֹא יְשֵׁנָה!)
+כָּל הַלַּיְלָה עֵרָה, עַד שֶׁכֻּלָּם בַּבַּיִת
+אִמָּא לֹא יְשֵׁנָה!
 
 [Outro: beat fades, deep male voice, spoken]
 לְכָל אִמָּא שֶׁמְּחַכָּה לְיַד הַדֶּלֶת... תּוֹדָה.
@@ -90,6 +121,7 @@ I-ma me-kha-ka, I-ma me-kha-ka la-khem
 
 [Beat Drop: hard boom bap drums, deep male rapper, shouted]
 Ze le-khol I-ma. Ba-a-rets u-va-o-lam!
+I-ma lo ye-she-na! (Lo ye-she-na!)
 
 [Verse 1: deep bass male rapper, aggressive, gritty]
 Sha-losh ba-lai-la, az-a-ka, hi ri-sho-na la-kum
@@ -101,11 +133,21 @@ Kol ra-ash ba-mad-re-got, rak she-ze lo ha-ka-tsin she-do-fek
 Ba-bo-ker hi me-kha-ye-khet, me-khi-na a-ru-khat e-ser la-gan
 Ve-rak ha-mik-la-khat sho-ma-at eikh hi bo-kha sham
 
+[Pre-Hook: deep male rapper, building tension, drums cut to kick only]
+Hi lo ye-she-na, hi lo na-kha
+Lo me-va-ke-shet, lo tso-e-ket, rak sho-me-ret al ha-mish-pa-kha
+
 [Hook: deep male rapper, gang vocals, chanted, powerful]
-Ein la me-dal-ya, ein la dar-got al ha-kte-fa-yim
+Ein la me-dal-ya, ein la dar-got al ha-kte-fa-yim (Ein!)
 A-val hi o-me-det ba-kha-zit, im ha-lev she-la bein ha-ya-da-yim
-I-ma yis-re-e-lit, hi lo nish-be-ret
-Gam ke-she-ha-sha-ma-yim nof-lim, hi od me-kha-be-ket
+I-ma yis-re-e-lit, hi lo nish-be-ret (Lo nish-be-ret!)
+Gam ke-she-ha-sha-ma-yim nof-lim, hi od me-kha-be-ket (Od me-kha-be-ket!)
+
+[Post-Hook: gang vocals, call and response, stadium chant]
+I-ma lo ye-she-na! (Lo ye-she-na!)
+I-ma lo ye-she-na! (Lo ye-she-na!)
+Kol ha-lai-la e-ra, ad she-ku-lam ba-ba-yit
+I-ma lo ye-she-na!
 
 [Verse 2: deep bass male rapper, intense, building]
 Yesh I-ma she-o-me-det ba-ki-kar im tmu-na
@@ -117,11 +159,21 @@ She-ro-a kha-da-shot me-ha-a-rets, u-vo-kha bish-vil ku-lam
 Az al ta-gi-du li mi gi-bor, al ta-gi-du li mi kha-zak
 Ha-gvu-ra ha-khi gdo-la? I-ma ba-ma-mad, im shlo-sha ye-la-dim ve-lev she-lo nif-rak
 
+[Pre-Hook: deep male rapper, building tension, drums cut to kick only]
+Hi lo ye-she-na, hi lo na-kha
+Lo me-va-ke-shet, lo tso-e-ket, rak sho-me-ret al ha-mish-pa-kha
+
 [Hook: deep male rapper, gang vocals, chanted, powerful]
-Ein la me-dal-ya, ein la dar-got al ha-kte-fa-yim
+Ein la me-dal-ya, ein la dar-got al ha-kte-fa-yim (Ein!)
 A-val hi o-me-det ba-kha-zit, im ha-lev she-la bein ha-ya-da-yim
-I-ma yis-re-e-lit, hi lo nish-be-ret
-Gam ke-she-ha-sha-ma-yim nof-lim, hi od me-kha-be-ket
+I-ma yis-re-e-lit, hi lo nish-be-ret (Lo nish-be-ret!)
+Gam ke-she-ha-sha-ma-yim nof-lim, hi od me-kha-be-ket (Od me-kha-be-ket!)
+
+[Post-Hook: gang vocals, call and response, stadium chant]
+I-ma lo ye-she-na! (Lo ye-she-na!)
+I-ma lo ye-she-na! (Lo ye-she-na!)
+Kol ha-lai-la e-ra, ad she-ku-lam ba-ba-yit
+I-ma lo ye-she-na!
 
 [Bridge: beat drops out, female vocals, sung, haunting, oud]
 Shu-vu ha-bay-ta, ye-la-dim she-li
@@ -137,11 +189,21 @@ Ve-hi am-da ba-de-let, ke-i-lu lo za-za mi-sham kol ha-ya-mim
 Ve-az he-van-ti, kol ha-zman ha-ze hi hai-ta i-ti ba-she-takh
 Kol lai-la she-sha-mar-ti, hi sham-ra a-lai me-ha-mit-bakh
 
+[Pre-Hook: deep male rapper, building tension, drums cut to kick only]
+Hi lo ye-she-na, hi lo na-kha
+Lo me-va-ke-shet, lo tso-e-ket, rak sho-me-ret al ha-mish-pa-kha
+
 [Final Hook: deep male rapper, gang vocals, female vocals layered, full power]
-Ein la me-dal-ya, ein la dar-got al ha-kte-fa-yim
+Ein la me-dal-ya, ein la dar-got al ha-kte-fa-yim (Ein!)
 A-val hi o-me-det ba-kha-zit, im ha-lev she-la bein ha-ya-da-yim
-I-ma yis-re-e-lit, hi lo nish-be-ret
-Gam ke-she-ha-sha-ma-yim nof-lim, hi od me-kha-be-ket
+I-ma yis-re-e-lit, hi lo nish-be-ret (Lo nish-be-ret!)
+Gam ke-she-ha-sha-ma-yim nof-lim, hi od me-kha-be-ket (Od me-kha-be-ket!)
+
+[Post-Hook: gang vocals, call and response, stadium chant]
+I-ma lo ye-she-na! (Lo ye-she-na!)
+I-ma lo ye-she-na! (Lo ye-she-na!)
+Kol ha-lai-la e-ra, ad she-ku-lam ba-ba-yit
+I-ma lo ye-she-na!
 
 [Outro: beat fades, deep male voice, spoken]
 Le-khol I-ma she-me-kha-ka le-yad ha-de-let... to-da.
@@ -162,6 +224,8 @@ I-ma me-kha-ka, I-ma me-kha-ka la-khem
 - **ממ"ד** נכתב "מַמָּד" בלי גרשיים — אחרת סונו עלול להקריא את האותיות אחת-אחת.
 
 ## 6. טיפים
+
+0. **סוגריים** = קולות רקע/אקו. סונו שר אותם כמו מקהלה שעונה לראפר — אל תמחקו אותם.
 
 1. **השניות הראשונות:** השיר נפתח באזעקה וקול אישה בודד, ואז פיצוץ של תופים וצעקה. אם סונו מתחיל עם מוזיקה ארוכה לפני כן — צרו שוב, או קצרו ב-Crop.
 2. אם הקול לא מספיק עמוק: הוסיפו בתחילת שדה הסגנון `deep voice, bass voice`.
